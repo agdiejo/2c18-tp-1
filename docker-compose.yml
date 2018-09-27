@@ -1,14 +1,23 @@
 version: '2'
 
 services:
-
+    gunicorn:
+        build:
+            context: ./py
+        ports:
+            - "8001:8000"
+    node:
+        build:
+            context: ./js
+        ports:
+            - "8002:8000"
     nginx:
         image: nginx:1.15.3
         ports:
-            - "5555:80"
+            - "5556:80"
         volumes:
             - ./nginx_reverse_proxy.conf:/etc/nginx/conf.d/default.conf:ro
-            - ./store/static/files:/static:ro
+            - ./static:/static:ro
         links:
             - gunicorn
             - node

@@ -1,14 +1,14 @@
 config:
   environments:
     node:
-      target: 'http://localhost:5555/node'
+      target: 'http://localhost:5556/node'
       plugins:
         statsd:
           host: localhost
           port: 8125
           prefix: "artillery-node"
     gunicorn:
-      target: 'http://localhost:5555/gunicorn'
+      target: 'http://localhost:5556/gunicorn'
       plugins:
         statsd:
           host: localhost
@@ -26,4 +26,4 @@ scenarios:
   - name: Root (/)
     flow:
       - get:
-          url: '/'
+          url: '/veloz'
