@@ -1,8 +1,11 @@
 const express= require("express")
 const app = express()
 
+//const PORT = 8000
+const PORT = process.argv[2];
+
 app.get("/veloz",(req,res)=>{
-    res.send("hola desde veloz js")
+    res.send("hola desde veloz js desde puerto " + PORT)
 })
 
 app.get("/timeout",(req,res)=>{
@@ -11,7 +14,6 @@ app.get("/timeout",(req,res)=>{
     },10000)
 })
 
-const PORT = 8000
 
 app.listen(PORT,"0.0.0.0",()=>{
     console.log("ESto escuchando en el puerto", PORT)
