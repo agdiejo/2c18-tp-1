@@ -495,8 +495,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "tp-arq-docker_node_1",
-          "value": "tp-arq-docker_node_1"
+          "text": "2c18-tp-1_node",
+          "value": "2c18-tp-1_node"
         },
         "hide": 0,
         "includeAll": false,
@@ -506,51 +506,31 @@
         "options": [
           {
             "selected": true,
-            "text": "tp-arq-docker_node_1",
-            "value": "tp-arq-docker_node_1"
+            "text": "2c18-tp-1_node",
+            "value": "2c18-tp-1_node"
           },
           {
             "selected": false,
-            "text": "tp-arq-docker_node_2",
-            "value": "tp-arq-docker_node_2"
+            "text": "2c18-tp-1_node_1",
+            "value": "2c18-tp-1_node_1"
           },
           {
             "selected": false,
-            "text": "tp-arq-docker_node_3",
-            "value": "tp-arq-docker_node_3"
+            "text": "2c18-tp-1_node_2",
+            "value": "2c18-tp-1_node_2"
           },
           {
             "selected": false,
-            "text": "tp-arq-docker_cadvisor_1",
-            "value": "tp-arq-docker_cadvisor_1"
+            "text": "2c18-tp-1_node_3",
+            "value": "2c18-tp-1_node_3"
           },
           {
             "selected": false,
-            "text": "tp-arq-docker_flask_1",
-            "value": "tp-arq-docker_flask_1"
-          },
-          {
-            "selected": false,
-            "text": "tp-arq-docker_grafana_1",
-            "value": "tp-arq-docker_grafana_1"
-          },
-          {
-            "selected": false,
-            "text": "tp-arq-docker_graphite_1",
-            "value": "tp-arq-docker_graphite_1"
-          },
-          {
-            "selected": false,
-            "text": "tp-arq-docker_gunicorn_1",
-            "value": "tp-arq-docker_gunicorn_1"
-          },
-          {
-            "selected": false,
-            "text": "tp-arq-docker_nginx_1",
-            "value": "tp-arq-docker_nginx_1"
+            "text": "2c18-tp-1_gunicorn",
+            "value": "2c18-tp-1_gunicorn"
           }
         ],
-        "query": "tp-arq-docker_node_1, tp-arq-docker_node_2, tp-arq-docker_node_3, tp-arq-docker_cadvisor_1, tp-arq-docker_flask_1, tp-arq-docker_grafana_1, tp-arq-docker_graphite_1, tp-arq-docker_gunicorn_1, tp-arq-docker_nginx_1",
+        "query": "2c18-tp-1_node, 2c18-tp-1_node_1, 2c18-tp-1_node_2, 2c18-tp-1_node_3, 2c18-tp-1_gunicorn",
         "type": "custom"
       }
     ]

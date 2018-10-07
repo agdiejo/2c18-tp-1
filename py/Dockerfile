@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:2.7.10
 RUN mkdir /usr/app
 WORKDIR /user/app
 RUN pip install flask gunicorn

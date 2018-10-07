@@ -5,12 +5,31 @@ services:
         build:
             context: ./py
         ports:
-            - "8001:8000"
+            - "8000:8000"
     node:
         build:
             context: ./js
         ports:
-            - "8002:8000"
+            - "3000:3000"
+        command: npm run start 3000
+    node_1:
+        build:
+            context: ./js
+        ports:
+            - "3001:3001"
+        command: npm run start 3001
+    node_2:
+        build:
+            context: ./js
+        ports:
+            - "3002:3002"
+        command: npm run start 3002
+    node_3:
+        build:
+            context: ./js
+        ports:
+            - "3003:3003"
+        command: npm run start 3003
     nginx:
         image: nginx:1.15.3
         ports:
@@ -21,6 +40,9 @@ services:
         links:
             - gunicorn
             - node
+            - node_1
+            - node_2
+            - node_3
 
     graphite:
         image: graphiteapp/graphite-statsd:1.1.3
