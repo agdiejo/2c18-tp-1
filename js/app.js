@@ -14,6 +14,14 @@ app.get("/timeout",(req,res)=>{
     },10000)
 })
 
+app.get("/intensivo", (req, res) => {
+	var total = 10000000
+	for (var i = 0; i < total; i++) {
+		Math.sqrt(i);
+	}
+	res.send("listo, procesado " + total + " raices en node")
+})
+
 
 app.listen(PORT,"0.0.0.0",()=>{
     console.log("ESto escuchando en el puerto", PORT)

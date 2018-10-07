@@ -1,4 +1,4 @@
-import time
+import time, math
 from flask import Flask
 app = Flask(__name__)
 
@@ -10,6 +10,14 @@ def root():
 def timeout():
     time.sleep(10)
     return "Hola desde timeout py"
+
+@app.route("/intensivo")
+def intensivo():
+	total = 10000000
+	for i in range(total):
+		math.sqrt(i)
+
+	return "listo, procesado " + str(total) + " raices en py" 
 
 if __name__=="__main__":
     app.run()
