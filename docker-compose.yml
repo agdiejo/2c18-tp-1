@@ -6,30 +6,30 @@ services:
             context: ./py
         ports:
             - "8000:8000"
-    node:
+    node_4:
         build:
             context: ./js
         ports:
-            - "3000:3000"
-        command: npm run start 3000
+            - "4004:4004"
+        command: npm run start 4004
     node_1:
         build:
             context: ./js
         ports:
-            - "3001:3001"
-        command: npm run start 3001
+            - "4001:4001"
+        command: npm run start 4001
     node_2:
         build:
             context: ./js
         ports:
-            - "3002:3002"
-        command: npm run start 3002
+            - "4002:4002"
+        command: npm run start 4002
     node_3:
         build:
             context: ./js
         ports:
-            - "3003:3003"
-        command: npm run start 3003
+            - "4003:4003"
+        command: npm run start 4003
     nginx:
         image: nginx:1.15.3
         ports:
@@ -39,7 +39,7 @@ services:
             - ./static:/static:ro
         links:
             - gunicorn
-            - node
+            - node_4
             - node_1
             - node_2
             - node_3

@@ -13,7 +13,7 @@ def timeout():
 
 @app.route("/intensivo")
 def intensivo():
-	total = 10000000
+	total = 100000
 	for i in range(total):
 		math.sqrt(i)
 

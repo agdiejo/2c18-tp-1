@@ -1,0 +1,2 @@
+server: artillery-node, artillery-gunicorn, artillery-node_rep
+container: arqsoft-tp1_node_1_1,arqsoft-tp1_node_2_1,arqsoft-tp1_node_3_1,arqsoft-tp1_node_4_1,arqsoft-tp1_gunicorn_1,arqsoft-tp1_nginx_1
