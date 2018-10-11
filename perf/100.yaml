@@ -25,12 +25,12 @@ config:
   pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
 
   phases:
-    - name: primeros 30 seg con 100
-      duration: 30
+    - name: primeros 60 seg con 100
+      duration: 60
       arrivalRate: 100
 
 scenarios:
   - name: Root (/)
     flow:
       - get:
-          url: '/intensivo'
+          url: '/veloz'
